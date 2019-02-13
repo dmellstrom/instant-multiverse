@@ -278,4 +278,15 @@
 					$main[0]._poptrox.windowMargin = 50;
 				});
 
+		// Hammer.js
+			var popupClass = $main[0]._poptrox.popupClass;
+			var overlay = $('.poptrox-overlay')[0];
+			var hammertime = new Hammer(overlay);
+			hammertime.on("swipeleft", function() {
+	      $('.' + popupClass).trigger('poptrox_next');
+	    });
+	    hammertime.on("swiperight", function() {
+	      $('.' + popupClass).trigger('poptrox_previous');
+	    });
+
 })(jQuery);
