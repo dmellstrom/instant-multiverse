@@ -2027,3 +2027,38 @@ input, select, textarea {
 		#footer .copyright a {
 			color: inherit;
 		}
+
+/* Folder icon for PMIG */
+
+	.folder {
+    position: relative;
+    width: 99%;
+    height: 94%;
+    margin-top: 3%;
+    border-radius: 0 10px 5px 5px;
+    line-height: 2em;
+    background-color: silver;
+    border-top: 5px solid gray;
+  }
+
+  .folder:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: -15px;
+    width: 50%;
+    height: 15px;
+    border-radius: 10px 20px 0 0;
+    background-color: silver;
+  }
+
+  .folder span {
+    display: block;
+    width: 40%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: initial;
+    margin-left: 10%;
+    font-weight: bold;
+  }
