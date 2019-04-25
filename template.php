@@ -69,7 +69,7 @@
                       <?php if(count($files)): ?>
                         <?php foreach($files as $i => $file): ?>
                           <article class="thumb">
-                            <a href="<?=$root?><?=$fulls?><?=htmlspecialchars($subpath)?><?=htmlspecialchars($file)?>" class="image">
+                            <a href="<?=$root?><?=$fulls?><?=htmlspecialchars($subpath)?><?=htmlspecialchars($file)?>" class="image" target="<?=$target?>">
                               <img src="<?=$root?>index.php?t=<?=htmlspecialchars($subpath)?><?=htmlspecialchars($file)?>" alt="<?=$file?>"/>
                             </a>
                             <h2><?=$file?></h2>
