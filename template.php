@@ -21,7 +21,7 @@
                     <header id="header">
                         <h1>
                           <?php if ($subpath): ?>
-                            <a href="<?=htmlspecialchars($_SERVER['REQUEST_URI'])?>">
+                            <a href="<?=rawurlencode($_SERVER['REQUEST_URI'])?>">
                           <?php else: ?>
                             <a href="<?=$root?>">
                           <?php endif; ?>
@@ -45,7 +45,7 @@
                       <?php if($subpath): ?>
                         <article class="thumb">
                           <?php if($parent): ?>
-                          <a href="<?=$root?>index.php?p=<?=$parent?>">
+                          <a href="<?=$root?>index.php?p=<?=rawurlencode($parent)?>">
                           <?php else: ?>
                           <a href="<?=$root?>">
                           <?php endif; ?>
@@ -59,7 +59,7 @@
                       <?php if(count($subdirs)): ?>
                         <?php foreach($subdirs as $subdir): ?>
                           <article class="thumb">
-                            <a href="<?=$root?>index.php?p=<?=$subpath?><?=htmlspecialchars($subdir)?>">
+                            <a href="<?=$root?>index.php?p=<?=rawurlencode($subpath)?><?=rawurlencode($subdir)?>">
                               <div class="folder"><span><?=htmlspecialchars($subdir)?><span></div>
                             </a>
                           </article>
@@ -69,8 +69,8 @@
                       <?php if(count($files)): ?>
                         <?php foreach($files as $i => $file): ?>
                           <article class="thumb">
-                            <a href="<?=$root?><?=$fulls?><?=htmlspecialchars($subpath)?><?=htmlspecialchars($file)?>" class="image" target="<?=$target?>">
-                              <img src="<?=$root?>index.php?t=<?=htmlspecialchars($subpath)?><?=htmlspecialchars($file)?>" alt="<?=$file?>"/>
+                            <a href="<?=$root?><?=$fulls?><?=rawurlencode($subpath)?><?=rawurlencode($file)?>" class="image" target="<?=$target?>">
+                              <img src="<?=$root?>index.php?t=<?=rawurlencode($subpath)?><?=rawurlencode($file)?>" alt="<?=$file?>"/>
                             </a>
                             <h2><?=$file?></h2>
                           </article>
